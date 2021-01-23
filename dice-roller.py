@@ -16,25 +16,25 @@ display.grid(row=0, column=0)
 def d100():
     display.delete(0, END)
     roll_val = rand.random() * 100
-    roll_val = int(round(roll_val, 0))
+    roll_val = round(roll_val)
     display.insert(0, str(roll_val))
 
 def d10():
     display.delete(0, END)
     roll_val = rand.random() * 10
-    roll_val = int(round(roll_val, 0))
+    roll_val = round(roll_val)
     display.insert(0, str(roll_val))
 
 def d6():
     display.delete(0, END)
     roll_val = rand.uniform(1,6)
-    roll_val = int(round(roll_val, 0))
+    roll_val = round(roll_val)
     display.insert(0, str(roll_val))
 
 def d4():
     display.delete(0, END)
     roll_val = rand.uniform(1,4)
-    roll_val = int(round(roll_val, 0))
+    roll_val = round(roll_val)
     display.insert(0, str(roll_val))
 
 # make the buttons
