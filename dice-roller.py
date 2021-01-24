@@ -37,16 +37,24 @@ def d4():
     roll_val = round(roll_val)
     display.insert(0, str(roll_val))
 
+def d8():
+    display.delete(0, END)
+    roll_val = rand.uniform(1,8)
+    roll_val = round(roll_val)
+    display.insert(0, str(roll_val))
+
 # make the buttons
 but_100 = Button(gui, text="d100", command=d100)
 but_10  = Button(gui, text="d10", command=d10)
+but_8  = Button(gui, text="d8", command=d8)
 but_6   = Button(gui, text="d6", command=d6)
 but_4   = Button(gui, text="d4", command=d4)
 
 # put the buttons in the window
 but_100.grid(row=1, column=0, sticky="nsew")
 but_10.grid(row=2, column=0, sticky="nsew")
-but_6.grid(row=3, column=0, sticky="nsew")
-but_4.grid(row=4, column=0, sticky="nsew")
+but_8.grid(row=3, column=0, sticky="nsew")
+but_6.grid(row=4, column=0, sticky="nsew")
+but_4.grid(row=5, column=0, sticky="nsew")
 
 gui.mainloop()
